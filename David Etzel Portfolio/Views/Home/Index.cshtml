@@ -17,8 +17,9 @@
     <link rel="stylesheet" href="~/Content/bootstrap.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700">
     <link rel="stylesheet" href="~/Content/style.css">
-    <!-- skin -->
     <link rel="stylesheet" href="~/Content/default.css">
+    <!-- skin -->
+    <link href="~/Content/Custom.css" rel="stylesheet" />
     <!-- =======================================================
       Theme Name: Vlava
       Theme URL: https://bootstrapmade.com/vlava-free-bootstrap-one-page-template/
@@ -601,7 +602,7 @@
             <!-- The content of the modal -->
             <div class="modal-content">
                 <div class="modal-header">
-                    <nav class="navbar navbar-inverse">
+                    <nav class="navbar-custom navbar-inverse-custom">
                         <ul class="nav navbar-nav">
                             <li id="fiveTab" class="active"><a href="#fivenum" data-toggle="tab">Five Numbers</a></li>
                             <li id="factTab"><a href="#factorial" data-toggle="tab">Factorials</a></li>
@@ -682,7 +683,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="code">
+                                <div class="codeStuff">
                                     <pre class="brush: js">
 //Calculations for Five Numbers
 var a, b, c, d, e;
@@ -752,7 +753,7 @@ $("#fiveClear").click(function () {
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="code">
+                                <div class="codeStuff">
                                     <pre class="brush: js ">
 //Calculations for Factorals
 $("#factCalc").click(function () {
@@ -821,7 +822,7 @@ $("#factClear").click(function () {
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="code">
+                                <div class="codeStuff">
                                     <pre class="brush: js ">
 //Calculations for FizzBuzz
 $("#fbCalc").click(function () {
@@ -893,7 +894,7 @@ $("#fbClear").click(function () {
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="code">
+                                <div class="codeStuff">
                                     <pre class="brush: js ">
 //Calculations for Palindrome
  $("#palCalc").click(function () {
@@ -1000,7 +1001,7 @@ $("#palClear").click(function () {
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="code">
+                                <div class="codeStuff">
                                     <pre class="brush: js ">
 //Calculations for Sum Of All Fears
 $("#kCalc").click(function () {
@@ -1056,9 +1057,6 @@ $("#kClear").click(function () {
     <script src="~/Scripts/stellar.js"></script>
     <script src="~/Scripts/jquery.appear.js"></script>
     <script src="~/Scripts/jquery.flexslider-min.js"></script>
-
-    <!-- Contact Form JavaScript File -->
-    <script src="~/Scripts/contactform.js"></script>
 
     <!-- Template Main Javascript File -->
     <script src="~/Scripts/main.js"></script>

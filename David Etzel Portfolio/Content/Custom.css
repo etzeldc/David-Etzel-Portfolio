@@ -1,0 +1,17 @@
+﻿.navbar-inverse-custom {
+    background-color: #222;
+    border-color: #080808;
+}
+
+.navbar-custom {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
