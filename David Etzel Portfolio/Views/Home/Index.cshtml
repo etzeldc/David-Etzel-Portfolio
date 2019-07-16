@@ -686,8 +686,8 @@
                                 <div class="codeStuff">
                                     <pre class="brush: js">
 //Calculations for Five Numbers
-var a, b, c, d, e;
 $("#fiveCalc").click(function () {
+    var a, b, c, d, e;
     a = +$("#five1").val();
     b = +$("#five2").val();
     c = +$("#five3").val();
@@ -703,13 +703,13 @@ $("#fiveCalc").click(function () {
     $("#sumNum").text("The SUM of the numbers entered is " + sum + ".");
     var prod = a * b * c * d * e;
     $("#prodNum").text("The PRODUCT of the numbers entered is " + prod + ".");
-})
+});
 
-//Clearing Five Number Input and Output Fields
+//Clearing all Five Number Input and Output Fields
 $("#fiveClear").click(function () {
     $(".input").val("");
     $(".output").text("");
-})
+});
                                 </pre>
                                 </div>
                             </div>
@@ -830,18 +830,18 @@ $("#fbCalc").click(function () {
     var buzz = $("#buzz").val();
     var fizzBuzz = [];
     for (i = 1; i <= 100; i++) {
-        if (i % fizz == 0 && i % buzz == 0) {
-            fizzBuzz.push(" FizzBuzz");
-        } else if (i % fizz == 0) {
-            fizzBuzz.push(" Buzz");
-        } else if (i % buzz == 0) {
-            fizzBuzz.push(" Fizz");
+        if (i % fizz === 0 && i % buzz === 0) {
+            fizzBuzz.push("<span class='fb shared'>FizzBuzz</span>");
+        } else if (i % fizz === 0) {
+            fizzBuzz.push("<span class='b shared'>Fizz</span>");
+        } else if (i % buzz === 0) {
+            fizzBuzz.push("<span class='f shared'>Buzz</span>");
         } else {
-            fizzBuzz.push(" " + i);
+            fizzBuzz.push(i);
         }
     }
-    $("#fbOut").text(fizzBuzz);
-})
+    $("#fbOut").html(fizzBuzz.join(', '));
+});
 
 //Clearing FizzBuzz Input and Output Fields
 $("#fbClear").click(function () {
@@ -1011,7 +1011,7 @@ $("#kCalc").click(function () {
     var kTrue = false;
     for (var i = 0; i < fear.length - 1; i++) {
         for (var j = i + 1; j <= fear.length - 1; j++) {
-            if (fear[i] + fear[j] == k) {
+            if (fear[i] + fear[j] === k) {
                 kTrue = true;
                 $("#kResponse").text("K has been found!");
                 $("#kEquation").text(fear[i] + " + " + fear[j] + " = " + k);
@@ -1019,7 +1019,7 @@ $("#kCalc").click(function () {
             }
         }
     }
-    if (kTrue == false) {
+    if (!kTrue) {
         $("#kResponse").text("K was not found in this array.");
     }
 })

@@ -55,9 +55,9 @@ $(function () {
             if (i % fizz === 0 && i % buzz === 0) {
                 fizzBuzz.push("<span class='fb shared'>FizzBuzz</span>");
             } else if (i % fizz === 0) {
-                fizzBuzz.push("<span class='b shared'>Buzz</span>");
+                fizzBuzz.push("<span class='b shared'>Fizz</span>");
             } else if (i % buzz === 0) {
-                fizzBuzz.push("<span class='f shared'>Fizz</span>");
+                fizzBuzz.push("<span class='f shared'>Buzz</span>");
             } else {
                 fizzBuzz.push(i);
             }
