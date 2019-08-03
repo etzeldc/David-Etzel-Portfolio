@@ -15,3 +15,21 @@
     background-color: #5cb85c;
     border-color: #4cae4c;
 }
+
+/*Modal Content*/
+.shared {
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.purple {
+    color: purple;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}

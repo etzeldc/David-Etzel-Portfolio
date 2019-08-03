@@ -152,6 +152,9 @@
     <Content Include="img\arrow_large_right.png" />
     <Content Include="img\arrow_small_left.png" />
     <Content Include="img\arrow_small_right.png" />
+    <Content Include="img\Dalek.JPG" />
+    <Content Include="img\HuecoTanks.jpg" />
+    <Content Include="img\MoabCrop.jpg" />
     <Content Include="img\BuffaloCreek.JPG" />
     <Content Include="img\bullets-new.png" />
     <Content Include="img\Centennial.JPG" />
@@ -166,7 +169,7 @@
     <Content Include="img\logo.png" />
     <Content Include="img\Moab.JPG" />
     <Content Include="img\OldCity.JPG" />
-    <Content Include="img\parallax\HangingLake.jpg" />
+    <Content Include="img\HangingLake.jpg" />
     <Content Include="img\parallax\img1.jpg" />
     <Content Include="img\parallax\img3.jpg" />
     <Content Include="img\portfolio\img1.jpg" />
@@ -189,6 +192,8 @@
     <Content Include="img\team\member3.jpg" />
     <Content Include="img\team\member4.jpg" />
     <Content Include="img\TelDan.JPG" />
+    <Content Include="img\HeilRanch.JPG" />
+    <Content Include="img\JasonTwichellHeadshot.jpg" />
     <Content Include="img\testimonial\testimonial1.png" />
     <Content Include="img\testimonial\testimonial2.png" />
     <Content Include="img\testimonial\testimonial3.png" />

@@ -329,11 +329,14 @@ section.section {
 ============================= */
 
 #parallax1{
-	background-image: url(../img/Emerald.jpg);
+	background-image: url(../img/PyramidsSizeCrop.jpg);
 }
 
 #testimonials{
-	background-image: url(../img/parallax/HangingLake.jpg);
+	background-image: url(../img/ShortOffCrop.jpg
+        );
+    background-repeat:no-repeat;
+    background-size:cover;
 }
 /*===========================
   --- Header & menu ----
