@@ -300,7 +300,7 @@
                                     <img src="~/img/EinAvdat.jpg" alt="">
                                     <div class="portfolio-desc align-center">
                                         <div class="folio-info">
-                                            <h5><a href="#">Portfolio name</a></h5>
+                                            <h3><a href="#" data-toggle="modal" data-target="#boCoModal" id="boCo">Boulder Weather API</a></h3>
                                             <a href="~/img/EinAvdat.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
                                         </div>
                                     </div>
@@ -435,7 +435,8 @@
             <div class="row align-center mar-bot40">
                 <div class="col-md-3">
                     <div class="team-member">
-                        <figure class="member-photo" data-toggle="modal" data-target="#fiveModal"><img src="~/img/Emerald.JPG" />
+                        <figure class="member-phot"" data-toggle="modal" data-target="#fiveModal">
+                            <img src="~/img/Emerald.JPG" />
                         </figure>
                         <div class="team-detail">
                             <h4>Five Numbers</h4>
@@ -469,8 +470,8 @@
                             <span>String Manipulation</span>
                         </div>
                     </div>
-            </div>
                 </div>
+            </div>
             <div class="row align-center mar-bot40">
                 <div class="col-md-4">
                     <div class="team-member">
@@ -635,6 +636,57 @@
 
     </section>
     <a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- Weather API Modal -->
+    <div id="boCoModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- The content of the modal -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="center-block">
+                        <div class="row">
+                            <div class="row text-center">
+                                <br />
+                                <h3>Boulder Weather API</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div id="palin" class="tab-pane">
+                        <div class="center-block">
+                            <div class="row">
+                                <div class="col-md-offset-1 col-md-4">
+                                    <div class="row text-center">
+                                        <h6>Enter any word or phrase below.</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-offset-1 col-md-5">
+                                    <div class="row text-center">
+                                        <h5>Results:</h5>
+                                    </div>
+                                    <div class="row text-center">
+                                        <div class="col-md-offset-1 col-md-">
+                                            <div id="boCoOut1" class="output"></div>
+                                            <div id="boCoOut2" class="output"></div>
+                                            <div id="boCoOut3" class="output"></div>
+                                            <div id="boCoOut4" class="output"></div>
+                                            <div id="boCoOut5" class="output"></div>
+                                            <div id="boCoOut6" class="output"></div>
+                                            <div id="boCoOut7" class="output"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Code Challenges Modals -->
     <div id="fiveModal" class="modal fade" role="dialog">
@@ -862,14 +914,14 @@ $(function () {
             <!-- The content of the modal -->
             <div class="modal-content">
                 <div class="modal-header">
-                <div class="center-block">
-                    <div class="row">
-                        <div class="row text-center">
-                            <br />
-                            <h3>FizzBuzz</h3>
+                    <div class="center-block">
+                        <div class="row">
+                            <div class="row text-center">
+                                <br />
+                                <h3>FizzBuzz</h3>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
                 <div class="modal-body">
                     <div id="fizzbuzz" class="tab-pane">
@@ -955,14 +1007,14 @@ $(function () {
     });
 });
                                 </pre>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn" data-dismiss="modal">Close</button>
-            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
@@ -972,15 +1024,15 @@ $(function () {
             <!-- The content of the modal -->
             <div class="modal-content">
                 <div class="modal-header">
-                <div class="center-block">
-                    <div class="row">
-                        <div class="row text-center">
-                            <br />
-                            <h3>Palindrome</h3>
+                    <div class="center-block">
+                        <div class="row">
+                            <div class="row text-center">
+                                <br />
+                                <h3>Palindrome</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
                 <div class="modal-body">
                     <div id="palin" class="tab-pane">
                         <div class="center-block">
@@ -1080,15 +1132,15 @@ $(function () {
             <!-- The content of the modal -->
             <div class="modal-content">
                 <div class="modal-header">
-                <div class="center-block">
-                    <div class="row">
-                        <div class="row text-center">
-                            <br />
-                            <h3>Sum of All Fears</h3>
+                    <div class="center-block">
+                        <div class="row">
+                            <div class="row text-center">
+                                <br />
+                                <h3>Sum of All Fears</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
                 <div class="modal-body">
                     <div id="fears" class="tab-pane">
                         <div class="center-block">
@@ -1307,22 +1359,22 @@ $(function () {
             <!-- The content of the modal -->
             <div class="modal-content">
                 <div class="modal-header">
-                <div class="center-block">
-                    <div class="row">
-                        <div class="row text-center">
-                            <br />
-                            <h3>Pig Latin</h3>
+                    <div class="center-block">
+                        <div class="row">
+                            <div class="row text-center">
+                                <br />
+                                <h3>Pig Latin</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
                 <div class="modal-body">
                     <div id="palin" class="tab-pane">
                         <div class="center-block">
                             <div class="row">
                                 <div class="row text-center">
                                     <div class="col-md-offset-1 col-md-10 info">
-                                        <h5>Englkish is translated into Pig Latin by taking the first phonetical sound of every word, moving it to the word's end,a nd adding an "ay" sound</h5>
+                                        <h5>English is translated into Pig Latin by taking the first phonetical sound of every word, moving it to the word's end,a nd adding an "ay" sound</h5>
                                         <br />
                                     </div>
                                 </div>
@@ -1368,63 +1420,7 @@ $(function () {
         var english = toPig.split(" ");
         for (var i = 0; i < english.length; i++) {
             if (english[i].charAt(0) == "a" || english[i].charAt(0) == "e" || english[i].charAt(0) == "i" || english[i].charAt(0) == "o" || english[i].charAt(0) == "u") {
-                english = english + "whay;"
-            } else if (english[i].charAt(0) == "b" && english[1].charAt(1) == "l") {
-                english[i] = english[i].slice(2, english[i].length) + "blay";
-            } else if (english[i].charAt(0) == "b" && english[1].charAt(1) == "r") {
-                english[i] = english[i].slice(2, english[i].length) + "bray";
-            } else if (english[i].charAt(0) == "c" && english[1].charAt(1) == "h") {
-                english[i] = english[i].slice(2, english[i].length) + "chay";
-            } else if (english[i].charAt(0) == "c" && english[1].charAt(1) == "l") {
-                english[i] = english[i].slice(2, english[i].length) + "clay";
-            } else if (english[i].charAt(0) == "c" && english[1].charAt(1) == "r") {
-                english[i] = english[i].slice(2, english[i].length) + "cray";
-            } else if (english[i].charAt(0) == "d" && english[1].charAt(1) == "r") {
-                english[i] = english[i].slice(2, english[i].length) + "dray";
-            } else if (english[i].charAt(0) == "f" && english[1].charAt(1) == "l") {
-                english[i] = english[i].slice(2, english[i].length) + "flay";
-            } else if (english[i].charAt(0) == "f" && english[1].charAt(1) == "r") {
-                english[i] = english[i].slice(2, english[i].length) + "fray";
-            } else if (english[i].charAt(0) == "g" && english[1].charAt(1) == "h") {
-                english[i] = english[i].slice(2, english[i].length) + "ghay";
-            } else if (english[i].charAt(0) == "g" && english[1].charAt(1) == "l") {
-                english[i] = english[i].slice(2, english[i].length) + "glay";
-            } else if (english[i].charAt(0) == "g" && english[1].charAt(1) == "r") {
-                english[i] = english[i].slice(2, english[i].length) + "gray";
-            } else if (english[i].charAt(0) == "p" && english[1].charAt(1) == "h") {
-                english[i] = english[i].slice(2, english[i].length) + "phay";
-            } else if (english[i].charAt(0) == "p" && english[1].charAt(1) == "l") {
-                english[i] = english[i].slice(2, english[i].length) + "play";
-            } else if (english[i].charAt(0) == "p" && english[1].charAt(1) == "r") {
-                english[i] = english[i].slice(2, english[i].length) + "pray";
-            } else if (english[i].charAt(0) == "q" && english[1].charAt(1) == "u") {
-                english[i] = english[i].slice(2, english[i].length) + "quay";
-            } else if (english[i].charAt(0) == "s" && english[1].charAt(1) == "c") {
-                english[i] = english[i].slice(2, english[i].length) + "scay";
-            } else if (english[i].charAt(0) == "s" && english[1].charAt(1) == "h") {
-                english[i] = english[i].slice(2, english[i].length) + "shay";
-            } else if (english[i].charAt(0) == "s" && english[1].charAt(1) == "k") {
-                english[i] = english[i].slice(2, english[i].length) + "skay";
-            } else if (english[i].charAt(0) == "s" && english[1].charAt(1) == "l") {
-                english[i] = english[i].slice(2, english[i].length) + "slay";
-            } else if (english[i].charAt(0) == "s" && english[1].charAt(1) == "m") {
-                english[i] = english[i].slice(2, english[i].length) + "smay";
-            } else if (english[i].charAt(0) == "s" && english[1].charAt(1) == "n") {
-                english[i] = english[i].slice(2, english[i].length) + "snay";
-            } else if (english[i].charAt(0) == "s" && english[1].charAt(1) == "p") {
-                english[i] = english[i].slice(2, english[i].length) + "spay";
-            } else if (english[i].charAt(0) == "s" && english[1].charAt(1) == "t") {
-                english[i] = english[i].slice(2, english[i].length) + "stay";
-            } else if (english[i].charAt(0) == "s" && english[1].charAt(1) == "w") {
-                english[i] = english[i].slice(2, english[i].length) + "sway";
-            } else if (english[i].charAt(0) == "q" && english[1].charAt(1) == "u") {
-                english[i] = english[i].slice(2, english[i].length) + "quay";
-            } else if (english[i].charAt(0) == "t" && english[1].charAt(1) == "h") {
-                english[i] = english[i].slice(2, english[i].length) + "thay";
-            } else if (english[i].charAt(0) == "t" && english[1].charAt(1) == "r") {
-                english[i] = english[i].slice(2, english[i].length) + "tray";
-            } else if (english[i].charAt(0) == "w" && english[1].charAt(1) == "h") {
-                english[i] = english[i].slice(2, english[i].length) + "whay";
+                english[i] = english[i] + "whay";
             } else {
                 english[i] = english[i].slice(1, english[i].length) + english[i].charAt(0) + "ay";
             }
@@ -1464,46 +1460,46 @@ $(function () {
     </div>
 
     @*<div id="SecondaryModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <nav class="navbar-custom navbar-inverse-custom">
-                    <ul class="nav nav-justified text-center">
-                        <li id="boCoTab" class="active"><a href="" data-toggle="tab">Boulder Weather</a></li>
-                        <li id=""><a href="#boCo" data-toggle="tab">CODE</a></li>
-                        <li id=""><a href="" data-toggle="tab">CODE</a></li>
-                        <li id=""><a href="" data-toggle="tab">CODE</a></li>
-                    </ul>
-                </nav>
-                <div class="modal-body tab-content">
-                    <div id="boCo" class="tab-pane active">
-                        <div class="row modal-header text-center">
-                            <h3>Boulder Weather App</h3>
-                        </div>
-                        <div class="col-md-offset-1 col-md-10 info">
-                            <div class="row text-center">
-                                <div class="col-md-6">
-                                    <div class="row">
-                                        <button id="boCoShow" class="btn btn-success">
-                                            Show Weather
-                                        </button>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <nav class="navbar-custom navbar-inverse-custom">
+                        <ul class="nav nav-justified text-center">
+                            <li id="boCoTab" class="active"><a href="" data-toggle="tab">Boulder Weather</a></li>
+                            <li id=""><a href="#boCo" data-toggle="tab">CODE</a></li>
+                            <li id=""><a href="" data-toggle="tab">CODE</a></li>
+                            <li id=""><a href="" data-toggle="tab">CODE</a></li>
+                        </ul>
+                    </nav>
+                    <div class="modal-body tab-content">
+                        <div id="boCo" class="tab-pane active">
+                            <div class="row modal-header text-center">
+                                <h3>Boulder Weather App</h3>
+                            </div>
+                            <div class="col-md-offset-1 col-md-10 info">
+                                <div class="row text-center">
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <button id="boCoShow" class="btn btn-success">
+                                                Show Weather
+                                            </button>
+                                        </div>
+                                        <div class="row">2</div>
+                                        <div class="row">3</div>
                                     </div>
-                                    <div class="row">2</div>
-                                    <div class="row">3</div>
-                                </div>
-                                <div id="boCoOut" class="col-md-6">
+                                    <div id="boCoOut" class="col-md-6">
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn" data-dismiss="modal">Close</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-dismiss="modal">Close</button>
 
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>*@
+        </div>*@
 
     <!-- Javascript Library Files -->
     <script src="~/Scripts/modernizr-2.6.2-respond-1.1.0.min.js"></script>

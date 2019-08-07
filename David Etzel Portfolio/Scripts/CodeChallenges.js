@@ -240,63 +240,7 @@ $(function () {
         var english = toPig.split(" ");
         for (var i = 0; i < english.length; i++) {
             if (english[i].charAt(0) == "a" || english[i].charAt(0) == "e" || english[i].charAt(0) == "i" || english[i].charAt(0) == "o" || english[i].charAt(0) == "u") {
-                english = english + "whay;"
-            } else if (english[i].charAt(0) == "b" && english[1].charAt(1) == "l") {
-                english[i] = english[i].slice(2, english[i].length) + "blay";
-            } else if (english[i].charAt(0) == "b" && english[1].charAt(1) == "r") {
-                english[i] = english[i].slice(2, english[i].length) + "bray";
-            } else if (english[i].charAt(0) == "c" && english[1].charAt(1) == "h") {
-                english[i] = english[i].slice(2, english[i].length) + "chay";
-            } else if (english[i].charAt(0) == "c" && english[1].charAt(1) == "l") {
-                english[i] = english[i].slice(2, english[i].length) + "clay";
-            } else if (english[i].charAt(0) == "c" && english[1].charAt(1) == "r") {
-                english[i] = english[i].slice(2, english[i].length) + "cray";
-            } else if (english[i].charAt(0) == "d" && english[1].charAt(1) == "r") {
-                english[i] = english[i].slice(2, english[i].length) + "dray";
-            } else if (english[i].charAt(0) == "f" && english[1].charAt(1) == "l") {
-                english[i] = english[i].slice(2, english[i].length) + "flay";
-            } else if (english[i].charAt(0) == "f" && english[1].charAt(1) == "r") {
-                english[i] = english[i].slice(2, english[i].length) + "fray";
-            } else if (english[i].charAt(0) == "g" && english[1].charAt(1) == "h") {
-                english[i] = english[i].slice(2, english[i].length) + "ghay";
-            } else if (english[i].charAt(0) == "g" && english[1].charAt(1) == "l") {
-                english[i] = english[i].slice(2, english[i].length) + "glay";
-            } else if (english[i].charAt(0) == "g" && english[1].charAt(1) == "r") {
-                english[i] = english[i].slice(2, english[i].length) + "gray";
-            } else if (english[i].charAt(0) == "p" && english[1].charAt(1) == "h") {
-                english[i] = english[i].slice(2, english[i].length) + "phay";
-            } else if (english[i].charAt(0) == "p" && english[1].charAt(1) == "l") {
-                english[i] = english[i].slice(2, english[i].length) + "play";
-            } else if (english[i].charAt(0) == "p" && english[1].charAt(1) == "r") {
-                english[i] = english[i].slice(2, english[i].length) + "pray";
-            } else if (english[i].charAt(0) == "q" && english[1].charAt(1) == "u") {
-                english[i] = english[i].slice(2, english[i].length) + "quay";
-            } else if (english[i].charAt(0) == "s" && english[1].charAt(1) == "c") {
-                english[i] = english[i].slice(2, english[i].length) + "scay";
-            } else if (english[i].charAt(0) == "s" && english[1].charAt(1) == "h") {
-                english[i] = english[i].slice(2, english[i].length) + "shay";
-            } else if (english[i].charAt(0) == "s" && english[1].charAt(1) == "k") {
-                english[i] = english[i].slice(2, english[i].length) + "skay";
-            } else if (english[i].charAt(0) == "s" && english[1].charAt(1) == "l") {
-                english[i] = english[i].slice(2, english[i].length) + "slay";
-            } else if (english[i].charAt(0) == "s" && english[1].charAt(1) == "m") {
-                english[i] = english[i].slice(2, english[i].length) + "smay";
-            } else if (english[i].charAt(0) == "s" && english[1].charAt(1) == "n") {
-                english[i] = english[i].slice(2, english[i].length) + "snay";
-            } else if (english[i].charAt(0) == "s" && english[1].charAt(1) == "p") {
-                english[i] = english[i].slice(2, english[i].length) + "spay";
-            } else if (english[i].charAt(0) == "s" && english[1].charAt(1) == "t") {
-                english[i] = english[i].slice(2, english[i].length) + "stay";
-            } else if (english[i].charAt(0) == "s" && english[1].charAt(1) == "w") {
-                english[i] = english[i].slice(2, english[i].length) + "sway";
-            } else if (english[i].charAt(0) == "q" && english[1].charAt(1) == "u") {
-                english[i] = english[i].slice(2, english[i].length) + "quay";
-            } else if (english[i].charAt(0) == "t" && english[1].charAt(1) == "h") {
-                english[i] = english[i].slice(2, english[i].length) + "thay";
-            } else if (english[i].charAt(0) == "t" && english[1].charAt(1) == "r") {
-                english[i] = english[i].slice(2, english[i].length) + "tray";
-            } else if (english[i].charAt(0) == "w" && english[1].charAt(1) == "h") {
-                english[i] = english[i].slice(2, english[i].length) + "whay";
+                english[i] = english[i] + "whay";
             } else {
                 english[i] = english[i].slice(1, english[i].length) + english[i].charAt(0) + "ay";
             }
@@ -322,3 +266,70 @@ $(function () {
         }
     });
 });
+
+
+//Weather API
+function adjustStationName(station) {
+    station = station.toLowerCase();
+    var stationName = station.split(" ");
+    return stationName[0].toUpperCase().charAt(0) + stationName[0].slice(1, stationName[0].length);
+}
+
+function whatIfNA(nawww) {
+    if (nawww === "n/a") {
+        return "Conditions not currently available";
+    }
+}
+
+function whichDir(direction) {
+    if (direction > 11.25 && direction <= 33.75) {
+        return "NNE";
+    } else if (direction > 33.75 && direction <= 56.25) {
+        return "NE";
+    } else if (direction > 56.25 && direction <= 78.75) {
+        return "ENE";
+    } else if (direction > 78.75 && direction <= 101.25) {
+        return "E";
+    } else if (direction > 101.25 && direction <= 123.75) {
+        return "ESE";
+    } else if (direction > 123.75 && direction <= 146.25) {
+        return "SE";
+    } else if (direction > 146.25 && direction <= 168.75) {
+        return "SSE";
+    } else if (direction > 168.75 && direction <= 191.25) {
+        return "S";
+    } else if (direction > 191.25 && direction <= 213.75) {
+        return "SSW";
+    } else if (direction > 213.75 && direction <= 236.25) {
+        return "SW";
+    } else if (direction > 236.25 && direction <= 258.75) {
+        return "WSW";
+    } else if (direction > 258.75 && direction <= 281.25) {
+        return "W";
+    } else if (direction > 281.25 && direction <= 303.75) {
+        return "WNW";
+    } else if (direction > 303.75 && direction <= 326.25) {
+        return "NW";
+    } else if (direction > 326.25 && direction <= 348.75) {
+        return "NNW";
+    } else if (direction > 348.75 && direction <= 360 || direction >= 0 && direction <= 11.25) {
+        return "N";
+    }
+}
+
+function getFahrenheit(celsius) {
+    celsius = (celsius * (9 / 5)) + 32;
+    return celsius.toFixed(1);
+}
+
+$("#boCo").click(function () {
+    $.get("http://api.geonames.org/weatherJSON?north=41&south=39&east=-104&west=-106&username=ertyseidohl", function (res) {
+        $("#boCoOut1").html('<h1><span>Station</span>: ' + adjustStationName(res.weatherObservations[2].stationName) + '</h1>')
+        $("#boCoOut2").text('<p>Conditions: ' + whatIfNA(res.weatherObservations[2].weatherCondition) + '</p>')
+        $("#boCoOut3").val('<p>Wind Direction: ' + whichDir(res.weatherObservations[2].windDirection) + '</p>')
+        $("#boCoOut4").html('<p>Wind Speed: ' + res.weatherObservations[2].windSpeed + ' mph</p>')
+        $("#boCoOut5").append('<p>Dew Point: ' + res.weatherObservations[2].dewPoint + '&deg;F</p>')
+        $("#boCoOut6").append('<p>Humidity: ' + res.weatherObservations[2].humidity + '%</p>')
+        $("#boCoOut7").append('<p class="temp">Temp: ' + getFahrenheit(res.weatherObservations[2].temperature) + '&deg;F</p>')
+    })
+})
