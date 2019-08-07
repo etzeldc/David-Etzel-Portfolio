@@ -139,7 +139,7 @@
     <Content Include="Content\overwrite.css" />
     <Content Include="Content\rs-plugin_css_settings.css" />
     <Content Include="Content\style.css" />
-    <Content Include="favicon.ico" />
+    <Content Include="favicon-16x16.png" />
     <Content Include="fonts\ecoicons\ecoicon.dev.svg" />
     <Content Include="fonts\ecoicons\ecoicon.svg" />
     <Content Include="fonts\fontawesome\fontawesome-webfont.svg" />
