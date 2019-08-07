@@ -268,68 +268,68 @@ $(function () {
 });
 
 
-//Weather API
-function adjustStationName(station) {
-    station = station.toLowerCase();
-    var stationName = station.split(" ");
-    return stationName[0].toUpperCase().charAt(0) + stationName[0].slice(1, stationName[0].length);
-}
+////Weather API
+//function adjustStationName(station) {
+//    station = station.toLowerCase();
+//    var stationName = station.split(" ");
+//    return stationName[0].toUpperCase().charAt(0) + stationName[0].slice(1, stationName[0].length);
+//}
 
-function whatIfNA(nawww) {
-    if (nawww === "n/a") {
-        return "Conditions not currently available";
-    }
-}
+//function whatIfNA(nawww) {
+//    if (nawww === "n/a") {
+//        return "Conditions not currently available";
+//    }
+//}
 
-function whichDir(direction) {
-    if (direction > 11.25 && direction <= 33.75) {
-        return "NNE";
-    } else if (direction > 33.75 && direction <= 56.25) {
-        return "NE";
-    } else if (direction > 56.25 && direction <= 78.75) {
-        return "ENE";
-    } else if (direction > 78.75 && direction <= 101.25) {
-        return "E";
-    } else if (direction > 101.25 && direction <= 123.75) {
-        return "ESE";
-    } else if (direction > 123.75 && direction <= 146.25) {
-        return "SE";
-    } else if (direction > 146.25 && direction <= 168.75) {
-        return "SSE";
-    } else if (direction > 168.75 && direction <= 191.25) {
-        return "S";
-    } else if (direction > 191.25 && direction <= 213.75) {
-        return "SSW";
-    } else if (direction > 213.75 && direction <= 236.25) {
-        return "SW";
-    } else if (direction > 236.25 && direction <= 258.75) {
-        return "WSW";
-    } else if (direction > 258.75 && direction <= 281.25) {
-        return "W";
-    } else if (direction > 281.25 && direction <= 303.75) {
-        return "WNW";
-    } else if (direction > 303.75 && direction <= 326.25) {
-        return "NW";
-    } else if (direction > 326.25 && direction <= 348.75) {
-        return "NNW";
-    } else if (direction > 348.75 && direction <= 360 || direction >= 0 && direction <= 11.25) {
-        return "N";
-    }
-}
+//function whichDir(direction) {
+//    if (direction > 11.25 && direction <= 33.75) {
+//        return "NNE";
+//    } else if (direction > 33.75 && direction <= 56.25) {
+//        return "NE";
+//    } else if (direction > 56.25 && direction <= 78.75) {
+//        return "ENE";
+//    } else if (direction > 78.75 && direction <= 101.25) {
+//        return "E";
+//    } else if (direction > 101.25 && direction <= 123.75) {
+//        return "ESE";
+//    } else if (direction > 123.75 && direction <= 146.25) {
+//        return "SE";
+//    } else if (direction > 146.25 && direction <= 168.75) {
+//        return "SSE";
+//    } else if (direction > 168.75 && direction <= 191.25) {
+//        return "S";
+//    } else if (direction > 191.25 && direction <= 213.75) {
+//        return "SSW";
+//    } else if (direction > 213.75 && direction <= 236.25) {
+//        return "SW";
+//    } else if (direction > 236.25 && direction <= 258.75) {
+//        return "WSW";
+//    } else if (direction > 258.75 && direction <= 281.25) {
+//        return "W";
+//    } else if (direction > 281.25 && direction <= 303.75) {
+//        return "WNW";
+//    } else if (direction > 303.75 && direction <= 326.25) {
+//        return "NW";
+//    } else if (direction > 326.25 && direction <= 348.75) {
+//        return "NNW";
+//    } else if (direction > 348.75 && direction <= 360 || direction >= 0 && direction <= 11.25) {
+//        return "N";
+//    }
+//}
 
-function getFahrenheit(celsius) {
-    celsius = (celsius * (9 / 5)) + 32;
-    return celsius.toFixed(1);
-}
+//function getFahrenheit(celsius) {
+//    celsius = (celsius * (9 / 5)) + 32;
+//    return celsius.toFixed(1);
+//}
 
-$("#boCo").click(function () {
-    $.get("http://api.geonames.org/weatherJSON?north=41&south=39&east=-104&west=-106&username=ertyseidohl", function (res) {
-        $("#boCoOut1").html('<h1><span>Station</span>: ' + adjustStationName(res.weatherObservations[2].stationName) + '</h1>')
-        $("#boCoOut2").text('<p>Conditions: ' + whatIfNA(res.weatherObservations[2].weatherCondition) + '</p>')
-        $("#boCoOut3").val('<p>Wind Direction: ' + whichDir(res.weatherObservations[2].windDirection) + '</p>')
-        $("#boCoOut4").html('<p>Wind Speed: ' + res.weatherObservations[2].windSpeed + ' mph</p>')
-        $("#boCoOut5").append('<p>Dew Point: ' + res.weatherObservations[2].dewPoint + '&deg;F</p>')
-        $("#boCoOut6").append('<p>Humidity: ' + res.weatherObservations[2].humidity + '%</p>')
-        $("#boCoOut7").append('<p class="temp">Temp: ' + getFahrenheit(res.weatherObservations[2].temperature) + '&deg;F</p>')
-    })
-})
+//$("#boCoModal").on("shown.bs.modal", function () {
+//    $.get("http://api.geonames.org/weatherJSON?north=41&south=39&east=-104&west=-106&username=ertyseidohl', function(res){ // this reach", function (res) {
+//        $("#boCoOut1").append('<h1><span>Station</span>: ' + adjustStationName(res.weatherObservations[2].stationName) + '</h1>');
+//        $("#boCoOut2").append('<p>Conditions: ' + whatIfNA(res.weatherObservations[2].weatherCondition) + '</p>');
+//        $("#boCoOut3").append('<p>Wind Direction: ' + whichDir(res.weatherObservations[2].windDirection) + '</p>');
+//        $("#boCoOut4").append('<p>Wind Speed: ' + res.weatherObservations[2].windSpeed + ' mph</p>');
+//        $("#boCoOut5").append('<p>Dew Point: ' + res.weatherObservations[2].dewPoint + '&deg;F</p>');
+//        $("#boCoOut6").append('<p>Humidity: ' + res.weatherObservations[2].humidity + '%</p>');
+//        $("#boCoOut7").append('<p class="temp">Temp: ' + getFahrenheit(res.weatherObservations[2].temperature) + '&deg;F</p>');
+//    });
+//})
